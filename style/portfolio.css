@@ -44,10 +44,16 @@ html {
     max-width: 400px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
+@media only screen and (max-width: 768px) {
 
-.form-overlay h2 {
-    margin-bottom: 20px;
-    text-align: center;
+    nav {
+
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .form-overlay .btn-primary {
