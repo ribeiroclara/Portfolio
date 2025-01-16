@@ -1,5 +1,5 @@
 body {
-    padding: 0px;
+    padding: 0;
     background-color: rgb(254, 244, 221);
     margin: 0;
     width: 100%;
@@ -23,6 +23,7 @@ html {
 .navbar {
     background-color: rgb(26, 23, 24);
 }
+
 .navbar-nav .nav-link {
     color: rgb(231, 54, 49);
     font-family: 'Roboto', sans-serif !important;
@@ -67,10 +68,6 @@ html {
     font-family: 'Roboto', sans-serif !important;
 }
 
-.navbar {
-    font-family: 'Arial', sans-serif;
-}
-
 .image-container {
     position: relative;
     width: 100%;
@@ -108,7 +105,6 @@ html {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('../img/3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -129,31 +125,76 @@ p {
     text-decoration: underline;
 }
 
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.home-img-mobile,
+.about-img-mobile,
+.portfolio-img-mobile {
+    display: none;
+}
 
 @media only screen and (max-width: 767px) {
-    .home {
-        background-image: url('../img/1mobile.jpg') !important;
+
+    /* Desktop images are hidden on mobile */
+    .home-img,
+    .about-img,
+    .portfolio-img {
+        display: none !important;
     }
 
-    .about {
-        background-image: url('../img/2mobile.jpg') !important;
+    /* Show mobile images */
+    .home-img-mobile,
+    .about-img-mobile,
+    .portfolio-img-mobile {
+        display: block !important;
     }
 
-    #portfolio {
-        background-image: url('../img/3mobile.jpg') !important;
+    /* Portfolio item styles for mobile */
+    .portfolio-item {
+        width: 100%;
+        margin-top: 20px;
+        /* Adjusted spacing between items */
     }
 
-.portfolio-item {
+    .portfolio-item img {
+        width: 90%;
+        /* Make images smaller on mobile */
+        height: auto;
+        margin: 0 auto;
+        /* Center images */
+    }
+}
+
+.home-img,
+.about-img,
+.portfolio-img {
     display: block;
-    width: 100%;
+}
+
+.home-img-mobile,
+.about-img-mobile,
+.portfolio-img-mobile {
+    display: none;
+}
+
+/* Portfolio layout for desktop */
+.portfolio-item {
+    display: inline-block;
+    width: 30%;
+    /* Three items per row */
     margin-top: 10px;
+    margin-right: 2%;
+    /* Space between items */
 }
 
 .portfolio-item img {
     width: 100%;
     height: auto;
     display: block;
-    margin-top: 0;
 }
 
 .navbar-toggler {
@@ -176,5 +217,4 @@ p {
 
 .form-overlay form h1 {
     font-size: 24px;
-}
 }
