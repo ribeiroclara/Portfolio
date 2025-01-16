@@ -129,8 +129,52 @@ p {
     text-decoration: underline;
 }
 
-@media (max-width: 767px) {
-    body {
-        background-color: yellow !important;
+
+@media only screen and (max-width: 767px) {
+    .home {
+        background-image: url('../img/1mobile.jpg') !important;
     }
+
+    .about {
+        background-image: url('../img/2mobile.jpg') !important;
+    }
+
+    #portfolio {
+        background-image: url('../img/3mobile.jpg') !important;
+    }
+
+.portfolio-item {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 0;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-nav {
+    flex-direction: column;
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    margin: 10px 0;
+}
+
+.form-overlay {
+    padding: 15px;
+    width: 80%;
+}
+
+.form-overlay form h1 {
+    font-size: 24px;
+}
 }
