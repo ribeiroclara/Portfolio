@@ -1,6 +1,6 @@
 body {
     padding: 0;
-    background-color: rgb(254, 244, 221);
+    background-color: rgb(26, 23, 24);
     margin: 0;
     width: 100%;
     height: 100%;
@@ -68,19 +68,13 @@ html {
     font-family: 'Roboto', sans-serif !important;
 }
 
-/* Imagem de fundo com flexbox */
 .image-container {
     position: relative;
     width: 100%;
-    height: 100vh;
-    /* Preenche a tela inteira */
-    background-color: rgb(254, 244, 221);
+    height: 60vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .form-overlay {
@@ -106,30 +100,13 @@ html {
     background-color: rgb(200, 45, 40);
 }
 
-/* Estilo do portfólio */
 #portfolio {
-    position: relative;
+    position: center;
     width: 100%;
-    padding: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.portfolio-item {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 p {
@@ -147,7 +124,6 @@ p {
     text-decoration: underline;
 }
 
-/* Imagens de fundo */
 img {
     width: 100%;
     height: auto;
@@ -155,14 +131,12 @@ img {
 }
 
 .home-img-mobile,
-.about-img-mobile,
-.portfolio-img-mobile {
+.about-img-mobile,.portfolio-img-mobile{
     display: none;
 }
 
 @media only screen and (max-width: 767px) {
 
-    /* Para dispositivos móveis: ocultar imagens desktop e exibir imagens móveis */
     .home-img,
     .about-img,
     .portfolio-img {
@@ -173,54 +147,58 @@ img {
     .about-img-mobile,
     .portfolio-img-mobile {
         display: block !important;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        /* Preenche sem distorcer */
     }
 
-    /* Ajuste para o layout do portfólio no mobile */
+    .home-img,
+    .about-img,
+    .portfolio-img {
+        display: block;
+    }
+
+    .home-img-mobile,
+    .about-img-mobile,
+    .portfolio-img-mobile {
+        display: none;
+    }
+
     .portfolio-item {
         width: 100%;
-        margin-top: 20px;
+        /* Garante que cada item ocupa a largura total */
+        margin-bottom: 20px;
+        /* Espaçamento entre os itens */
+        text-align: center;
+        /* Centraliza o conteúdo */
     }
 
     .portfolio-item img {
-        border-radius: 8px;
-        /* A imagem vai ter borda arredondada no mobile também */
+        max-width: 90%;
+        /* Ajusta o tamanho da imagem para caber bem no mobile */
+        margin: 0 auto;
+        /* Centraliza horizontalmente */
+        display: block;
+        border-radius: 10px;
+        /* Bordas arredondadas para estética */
     }
-}
 
-.home-img,
-.about-img,
-.portfolio-img {
-    display: block;
-}
+    .navbar-toggler {
+        border: none;
+    }
 
-.home-img-mobile,
-.about-img-mobile,
-.portfolio-img-mobile {
-    display: none;
-}
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.navbar-toggler {
-    border: none;
-}
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
 
-.navbar-nav {
-    flex-direction: column;
-    text-align: center;
-}
+    .form-overlay {
+        padding: 15px;
+        width: 80%;
+    }
 
-.navbar-nav .nav-item {
-    margin: 10px 0;
-}
-
-.form-overlay {
-    padding: 15px;
-    width: 80%;
-}
-
-.form-overlay form h1 {
-    font-size: 24px;
+    .form-overlay form h1 {
+        font-size: 24px;
+    }
 }
