@@ -104,88 +104,6 @@ html {
     background-color: rgb(200, 45, 40);
 }
 
-@media (max-width: 767px) {
-    .image-container {
-        height: 80vh;
-    }
-
-    .form-overlay {
-        width: 70%;
-        padding: 15px;
-        max-width: 90%;
-    }
-    #home {
-        background-image: url('../img/1mobile.jpg');
-                  background-size: cover;
-                  height: 50vh;
-                  object-fit: cover;
-                  display: block;
-                  margin: 0;
-                  padding: 0;
-              }
-    
-              #about {
-                  background-image: url('../img/2mobile.jpg');
-                  background-size: cover;
-                  height: 50vh;
-                  object-fit: cover;
-                  display: block;
-                  margin: 0;
-                  padding: 0;
-              }
-    
-              #portfolio {
-                  background-image: url('../img/3mobile.jpg');
-                  background-size: cover;
-                  height: 50vh;
-                  object-fit: cover;
-                  display: block;
-                  margin: 0;
-                  padding: 0;
-              }
-    
-              .navbar-toggler {
-                  border: none;
-              }
-    
-              .navbar-collapse {
-                  text-align: center;
-              }
-    
-              .navbar-nav {
-                  flex-direction: column;
-              }
-    
-              .navbar-nav .nav-item {
-                  margin: 10px 0;
-              }
-    
-              .form-overlay {
-                  padding: 20px;
-              }
-    
-              .form-overlay form h1 {
-                  font-size: 24px;
-                  text-align: center;
-              }
-              .portfolio-item img {
-                width: 100%;
-                height: auto;
-            }
-
-            .portfolio-item {
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-
-            .portfolio-item p a {
-                font-size: 14px;
-                text-align: center;
-                display: block;
-                margin-top: 10px;
-            }
-          }
-
 #portfolio {
     position: relative;
     width: 100%;
@@ -209,4 +127,80 @@ p {
 
 .text-center a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .image-container {
+        height: 80vh;
+    }
+
+    .form-overlay {
+        width: 70%;
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    #home {
+        background-image: url('../img/1mobile.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+    }
+
+    #about {
+        background-image: url('../img/2mobile.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+    }
+
+    #portfolio {
+        background-image: url('../img/3mobile.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+    }
+
+    .portfolio-item {
+        display: block;
+        /* Faz as imagens ficarem em coluna */
+        width: 100%;
+        /* Garante que as imagens ocupem a largura total */
+        margin-top: 10px;
+        /* Ajusta o espaçamento entre as imagens */
+    }
+
+    /* Ajuste das imagens do portfólio para dispositivos móveis e tablets */
+    .portfolio-item img {
+        width: 100%;
+        /* Faz com que as imagens fiquem menores e ocupem 100% da largura disponível */
+        height: auto;
+        /* Ajusta a altura para manter a proporção */
+        display: block;
+        /* Faz com que as imagens se empilhem uma em cima da outra */
+        margin-top: 0;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+
+    /* Ajustes na formatação do formulário */
+    .form-overlay {
+        padding: 15px;
+        width: 80%;
+    }
+
+    .form-overlay form h1 {
+        font-size: 24px;
+    }
 }
