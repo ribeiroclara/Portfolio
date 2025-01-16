@@ -1,6 +1,9 @@
 body {
-    padding-top: 0px;
+    padding: 0px;
     background-color: rgb(254, 244, 221);
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
 html {
@@ -72,10 +75,10 @@ html {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url('img/3.jpeg');
-    background-size: cover;
     background-color: rgb(254, 244, 221);
-    background-position: center center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .form-overlay {
@@ -83,16 +86,13 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Centraliza o formulário */
-    background: rgba(0, 0, 0, 0.7);
-    /* Fundo semitransparente */
-    color: rgb(254, 244, 221);;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
     padding: 20px;
     border-radius: 10px;
     width: 90%;
-    max-width: 400px;
-    /* Define um tamanho máximo para o formulário */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .form-overlay .btn-primary {
@@ -107,11 +107,36 @@ html {
 @media (max-width: 767px) {
     .image-container {
         height: 80vh;
-        /* Ajusta a altura para telas pequenas */
     }
 
     .form-overlay {
-        width: 85%;
-        /* Deixa o formulário um pouco maior em telas pequenas */
+        width: 70%;
+        padding: 15px;
+        max-width: 90%;
     }
+}
+
+#portfolio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+p {
+    font-size: 14px;
+    color: rgb(254, 244, 221);
+    margin-top: 20px;
+}
+
+.text-center a {
+    color: rgb(254, 244, 221);
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
 }
