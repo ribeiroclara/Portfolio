@@ -68,14 +68,19 @@ html {
     font-family: 'Roboto', sans-serif !important;
 }
 
+/* Imagem de fundo com flexbox */
 .image-container {
     position: relative;
     width: 100%;
     height: 100vh;
+    /* Preenche a tela inteira */
     background-color: rgb(254, 244, 221);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-overlay {
@@ -101,13 +106,30 @@ html {
     background-color: rgb(200, 45, 40);
 }
 
+/* Estilo do portfólio */
 #portfolio {
     position: relative;
     width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio-item {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
 }
 
 p {
@@ -125,6 +147,7 @@ p {
     text-decoration: underline;
 }
 
+/* Imagens de fundo */
 img {
     width: 100%;
     height: auto;
@@ -139,33 +162,32 @@ img {
 
 @media only screen and (max-width: 767px) {
 
-    /* Desktop images are hidden on mobile */
+    /* Para dispositivos móveis: ocultar imagens desktop e exibir imagens móveis */
     .home-img,
     .about-img,
     .portfolio-img {
         display: none !important;
     }
 
-    /* Show mobile images */
     .home-img-mobile,
     .about-img-mobile,
     .portfolio-img-mobile {
         display: block !important;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* Preenche sem distorcer */
     }
 
-    /* Portfolio item styles for mobile */
+    /* Ajuste para o layout do portfólio no mobile */
     .portfolio-item {
         width: 100%;
         margin-top: 20px;
-        /* Adjusted spacing between items */
     }
 
     .portfolio-item img {
-        width: 90%;
-        /* Make images smaller on mobile */
-        height: auto;
-        margin: 0 auto;
-        /* Center images */
+        border-radius: 8px;
+        /* A imagem vai ter borda arredondada no mobile também */
     }
 }
 
@@ -179,22 +201,6 @@ img {
 .about-img-mobile,
 .portfolio-img-mobile {
     display: none;
-}
-
-/* Portfolio layout for desktop */
-.portfolio-item {
-    display: inline-block;
-    width: 30%;
-    /* Three items per row */
-    margin-top: 10px;
-    margin-right: 2%;
-    /* Space between items */
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-    display: block;
 }
 
 .navbar-toggler {
