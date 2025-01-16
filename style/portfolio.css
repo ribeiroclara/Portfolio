@@ -1,5 +1,5 @@
 body {
-    padding: 0;
+    padding: 0px;
     background-color: rgb(26, 23, 24);
     margin: 0;
     width: 100%;
@@ -68,10 +68,15 @@ html {
     font-family: 'Roboto', sans-serif !important;
 }
 
+.navbar {
+    font-family: 'Arial', sans-serif;
+}
+
 .image-container {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 100vh;
+    background-color: rgb(254, 244, 221);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -99,14 +104,37 @@ html {
 .form-overlay .btn-primary:hover {
     background-color: rgb(200, 45, 40);
 }
-
 #portfolio {
-    position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.portfolio-item {
     width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.image-below {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.image-below .portfolio-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px;
 }
 
 p {
@@ -124,81 +152,56 @@ p {
     text-decoration: underline;
 }
 
-img {
+.home-img,
+.about-img,
+.portfolio-img {
     width: 100%;
     height: auto;
     display: block;
+    margin-top: 70px;
+    /* Para compensar o navbar fixo */
 }
 
 .home-img-mobile,
-.about-img-mobile,.portfolio-img-mobile{
+.about-img-mobile,
+.portfolio-img-mobile {
     display: none;
 }
 
 @media only screen and (max-width: 767px) {
-
-    .home-img,
-    .about-img,
-    .portfolio-img {
-        display: none !important;
-    }
-
-    .home-img-mobile,
-    .about-img-mobile,
-    .portfolio-img-mobile {
-        display: block !important;
-    }
-
-    .home-img,
-    .about-img,
-    .portfolio-img {
-        display: block;
-    }
-
-    .home-img-mobile,
-    .about-img-mobile,
-    .portfolio-img-mobile {
-        display: none;
-    }
-
-    .portfolio-item {
-        width: 100%;
-        /* Garante que cada item ocupa a largura total */
-        margin-bottom: 20px;
-        /* Espaçamento entre os itens */
-        text-align: center;
-        /* Centraliza o conteúdo */
-    }
-
-    .portfolio-item img {
-        max-width: 90%;
-        /* Ajusta o tamanho da imagem para caber bem no mobile */
-        margin: 0 auto;
-        /* Centraliza horizontalmente */
-        display: block;
-        border-radius: 10px;
-        /* Bordas arredondadas para estética */
-    }
-
-    .navbar-toggler {
-        border: none;
-    }
-
     .navbar-nav {
         flex-direction: column;
-        text-align: center;
+        gap: 10px;
     }
 
     .navbar-nav .nav-item {
-        margin: 10px 0;
+        margin: 5px 0;
     }
 
-    .form-overlay {
-        padding: 15px;
-        width: 80%;
+    .home-img,
+    .about-img,
+    .portfolio-img {
+        display: none;
     }
 
-    .form-overlay form h1 {
-        font-size: 24px;
+    .home-img-mobile,
+    .about-img-mobile,
+    .portfolio-img-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-top: 80px;
+    }
+
+    .portfolio-item {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .portfolio-item img {
+        max-width: 50%;
+        margin: 0 auto;
+        border-radius: 10px;
     }
 }
