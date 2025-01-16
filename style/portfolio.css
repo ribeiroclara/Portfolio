@@ -66,11 +66,18 @@ html {
 
 .navbar {
     font-family: 'Roboto', sans-serif !important;
-}
-
-.navbar {
-    font-family: 'Arial', sans-serif;
-}
+    position: fixed;
+            /* Fixa a navbar no topo */
+            top: 0;
+            /* Garante que ela fique no topo */
+            left: 0;
+            width: 100%;
+            /* Garante que ela ocupe toda a largura */
+            z-index: 1000;
+            /* Coloca a navbar sobre outros conteúdos */
+            background-color: rgb(26, 23, 24);
+            /* Cor de fundo para a navbar */
+        }
 
 .image-container {
     position: relative;
