@@ -114,7 +114,61 @@ html {
         padding: 15px;
         max-width: 90%;
     }
-}
+    #home {
+        background-image: url('img/1mobile.jpg');
+                  background-size: cover;
+                  height: 50vh;
+                  object-fit: cover;
+                  display: block;
+                  margin: 0;
+                  padding: 0;
+              }
+    
+              #about {
+                  background-image: url('img/2mobile.jpg');
+                  background-size: cover;
+                  height: 50vh;
+                  object-fit: cover;
+                  display: block;
+                  margin: 0;
+                  padding: 0;
+              }
+    
+              #portfolio {
+                  background-image: url('img/3mobile.jpg');
+                  background-size: cover;
+                  height: 50vh;
+                  object-fit: cover;
+                  display: block;
+                  margin: 0;
+                  padding: 0;
+              }
+    
+              .navbar-toggler {
+                  border: none;
+              }
+    
+              .navbar-collapse {
+                  text-align: center;
+              }
+    
+              .navbar-nav {
+                  flex-direction: column;
+              }
+    
+              .navbar-nav .nav-item {
+                  margin: 10px 0;
+              }
+    
+              .form-overlay {
+                  padding: 20px;
+              }
+    
+              .form-overlay form h1 {
+                  font-size: 24px;
+                  text-align: center;
+              }
+          }
 
 #portfolio {
     position: relative;
