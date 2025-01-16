@@ -115,7 +115,7 @@ html {
         max-width: 90%;
     }
     #home {
-        background-image: url('img/1mobile.jpg');
+        background-image: url('../img/1mobile.jpg');
                   background-size: cover;
                   height: 50vh;
                   object-fit: cover;
@@ -125,7 +125,7 @@ html {
               }
     
               #about {
-                  background-image: url('img/2mobile.jpg');
+                  background-image: url('../img/2mobile.jpg');
                   background-size: cover;
                   height: 50vh;
                   object-fit: cover;
@@ -135,7 +135,7 @@ html {
               }
     
               #portfolio {
-                  background-image: url('img/3mobile.jpg');
+                  background-image: url('../img/3mobile.jpg');
                   background-size: cover;
                   height: 50vh;
                   object-fit: cover;
@@ -168,6 +168,22 @@ html {
                   font-size: 24px;
                   text-align: center;
               }
+              .portfolio-item img {
+                width: 100%;
+                height: auto;
+            }
+
+            .portfolio-item {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .portfolio-item p a {
+                font-size: 14px;
+                text-align: center;
+                display: block;
+                margin-top: 10px;
+            }
           }
 
 #portfolio {
