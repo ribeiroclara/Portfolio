@@ -67,17 +67,12 @@ html {
 .navbar {
     font-family: 'Roboto', sans-serif !important;
     position: fixed;
-            /* Fixa a navbar no topo */
-            top: 0;
-            /* Garante que ela fique no topo */
-            left: 0;
-            width: 100%;
-            /* Garante que ela ocupe toda a largura */
-            z-index: 1000;
-            /* Coloca a navbar sobre outros conteúdos */
-            background-color: rgb(26, 23, 24);
-            /* Cor de fundo para a navbar */
-        }
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(26, 23, 24);
+}
 
 .image-container {
     position: relative;
@@ -166,7 +161,6 @@ p {
     height: auto;
     display: block;
     margin-top: 70px;
-    /* Para compensar o navbar fixo */
 }
 
 .home-img-mobile,
